@@ -1,4 +1,4 @@
-# Claude Session Manager
+# PROMPTMAN
 
 ## Overview
 
