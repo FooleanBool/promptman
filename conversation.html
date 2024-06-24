@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation View</title>
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <style>
+body { 
+    transition: background-color 0.3s, color 0.3s; 
+}
+body.dark-mode { 
+    background-color: #2C2C29; 
+    color: #f0f0f0; 
+}
+body.light-mode { 
+    background-color: #F1F0E8; 
+    color: #333333; 
+}
+.message { 
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.user-message { 
+    background-color: #1E1D19; 
+}
+.claude-message { 
+    background-color: #30302D; 
+}
+.uk-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #a0aec0;
+}
+.uk-card-body {
+    padding: 15px 20px;
+}
+#conversation-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.conversation-title {
+    text-align: center;
+    color: #a0aec0;  /* A lighter color for better readability */
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+
+    </style>
+</head>
+<body class="dark-mode">
+    <!-- <div id="conversation-container" class=""> -->
+        <!-- <button id="modeToggle" class="uk-button uk-button-default uk-margin-bottom">Toggle Light/Dark Mode</button> -->
+        <div id="conversation-container" class=""></div>
+    <!-- </div> -->
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+    <script src="js/conversation.js"></script>
+</body>
+</html>

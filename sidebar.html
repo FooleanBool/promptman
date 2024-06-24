@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" uk-light>
+
+<head>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <!--CONTAINER-->
+    <div id="sidebar" class="uk-container-expand sidebar-wrapper">
+
+        <div class="uk-flex uk-flex-column sidebar-container">
+
+            <!--NAV-->
+            <nav class="uk-navbar-container uk-navbar-small sidebar-header" uk-navbar>
+
+                <div class="uk-navbar-left">
+                    <a class="uk-primary uk-navbar-item uk-logo uk-margin-left" href="#">Prompts.</a>
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-navbar-small uk-margin-right">
+                        <li>
+                            <a href="#" uk-toggle="target: #sidebar-menu" class="uk-navbar-toggle-animate">
+                                <span uk-navbar-toggle-icon></span>
+                            </a>
+                            <div id="sidebar-menu" class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <!-- <li><a href="#" id="newPromptBtn" >New Prompt</a></li> -->
+                                    <li><a href="#" id="downloadContentBtn">Save Session</a></li>
+                                    <li><a href="#" id="importPromptsBtn">Import Prompts</a></li>
+                                    <li><a href="#" id="exportPromptsBtn">Export Prompts</a></li>
+                                    <li><a href="#" id="loadConversationBtn">Load Conversation</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--CONTENT-->
+            <div class="uk-flex-1 sidebar-content uk-padding">
+
+                <div id="promptsDiv"></div>
+
+                </div>
+
+                <div class="uk-position-bottom uk-position-fixed">
+
+                    <button id="newPromptBtn" class="uk-button uk-button-primary uk-width-1-1">New Prompt</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!--MODAL-->
+        <div id="editPromptModal" class="uk-modal-container" uk-modal>
+
+            <div class="uk-modal-dialog">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                <div class="uk-modal-header">
+                    <h4 id="modalTitle" class="uk-modal-title uk-h3">Edit Prompt</h4>
+                </div>
+                <div class="uk-modal-body">
+                    <form id="promptForm" class="uk-form-horizontal">
+                        <input type="hidden" id="promptId" value="">
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="promptCategory">Category:</label>
+                            <div class="uk-form-controls">
+                                <select class="uk-select" id="promptCategory" required>
+                                    <option value="1" selected>Miscelaneous</option>
+                                    <option value="2">Programing</option>
+                                    <option value="3">Debate</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="promptTitle">Title:</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" id="promptTitle" maxlength="40" required>
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="promptDesc">Description:</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" id="promptDesc" maxlength="100" required>
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="promptText">Prompt:</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea uk-textarea-expand" id="promptText" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <div class="uk-form-controls">
+                                <button class="uk-button uk-button-default uk-modal-close uk-button-small" type="submit">Cancel</button>
+                                <button class="uk-button uk-button-primary uk-button-small" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- js includes -->
+        <script src="uikit/js/uikit.min.js"></script>
+        <script src="uikit/js/uikit-icons.min.js"></script>
+        <script src="js/sidebar.js"></script>
+        <script src="js/storage.js"></script>
+        <script src="js/display.js"></script>
+        <script src="js/form.js"></script>
+</body>
+
+</html>
